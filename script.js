@@ -1,9 +1,16 @@
 const header = document.querySelector('header');
 const mySpan = document.querySelector('.myspan');
 const navLink = document.querySelectorAll('nav ul li a');
+const myLogin = document.querySelector('.login');
+const myLoginContainer = document.querySelector('div.login-direct')
 
 
-
+myLogin.addEventListener('mouseover',()=>{
+  myLoginContainer.style.backgroundColor = "#de5e1e";
+});
+myLogin.addEventListener('mouseout',()=>{
+myLoginContainer.style.backgroundColor = "";
+})
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) { 
@@ -12,7 +19,7 @@ window.addEventListener('scroll', () => {
     header.classList.remove('sticky');
   }
 });
-
+header.style.backgroundColor
 
 navLink.forEach((link) => {
   link.addEventListener('click', (e) => {
@@ -43,10 +50,14 @@ const nav = document.querySelector('nav');
 
 
 navToggles.forEach(navToggle => {
-    navToggle.addEventListener('click', () => {
+    navToggle.addEventListener('click', (event) => {
+        event.stopPropagation();
         nav.classList.toggle('active');
       });
 });
+document.body.addEventListener('click',()=>{
+  nav.classList.remove('active');
+})
 
 const currentYear = new Date().getFullYear();
 

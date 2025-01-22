@@ -86,6 +86,64 @@ section.preheader .contact .col i {
   transition: 0.23s ease-in;
   padding-top: 2px;
 }
+div.login-direct{
+  border: 1px solid #f16821;
+  height: 35px;
+  width: 15%;
+  border-radius: 20px;
+  display: flex;
+  /* gap: 10px; */
+  overflow: hidden;
+  position: relative;
+  transition: all 0.45s;
+}
+div.login-direct > .sign-up{
+  /* position: absolute; */
+  background-color: #f16821;
+  height: 100%;
+  width: 55%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.45s;
+}
+div.login-direct > .sign-up:hover{
+  background-color: #de5e1e;
+}
+div.login-direct > .login{
+  width: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #f16821;
+  text-decoration: none;
+  transition: all 0.45s;
+}
+div.login-direct > .login:hover{
+  color: white;
+}
+@media (max-width: 768px) {
+  div.login-direct {
+    width: 23%;
+    
+}
+}
+@media (max-width: 464px) {
+  div.login-direct {
+      width: 36%;
+  }
+}
+@media (max-width: 326px) {
+  div.login-direct {
+      width: 36%;
+      font-size: 13px;
+  }
+}
+
+
 
 @media (max-width: 768px) {
   section.preheader .contact .col p {
@@ -101,6 +159,14 @@ section.preheader .contact .col i {
   }
   section.preheader .contact {
     gap: 18px;
+  }
+}
+@media (max-width: 326px) {
+  section.preheader .contact .col p {
+    display: none;
+  }
+  section.preheader .contact {
+    gap: 4px;
   }
 }
 /* header */
@@ -133,6 +199,7 @@ nav ul a {
   font-size: 16px;
   padding: 10px;
   transition: 0.24s ease-in;
+  text-wrap: nowrap;
 }
 nav ul a:hover {
   color: #f16821;
